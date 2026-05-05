@@ -1,0 +1,98 @@
+#skills { position: relative; }
+.skills-container { display: flex; flex-direction: column; gap: 3rem; }
+.skills-category h3 {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--neon-cyan);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.skills-category h3::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--border-glow), transparent);
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.skill-tag::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--neon-cyan);
+  transform: scaleY(0);
+  transition: var(--transition);
+  box-shadow: var(--glow-sm);
+}
+.skill-tag:hover {
+  border-color: var(--border-glow);
+  color: var(--neon-cyan);
+  background: rgba(0,245,255,0.06);
+  transform: translateY(-2px);
+  box-shadow: var(--glow-sm);
+}
+.skill-tag:hover::before { transform: scaleY(1); }
+.skill-bars-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.skill-bar-item {}
+.skill-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.skill-bar-name {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+}
+.skill-bar-pct {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--neon-cyan);
+}
+.skill-bar-track {
+  height: 4px;
+  background: rgba(0,245,255,0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-teal));
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--neon-cyan);
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+@media (max-width: 900px) {
+  .skill-bars-grid { grid-template-columns: 1fr; }
+}

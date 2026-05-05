@@ -1,0 +1,168 @@
+#coding { position: relative; }
+.profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.profile-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  padding: 1.8rem;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.profile-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(0,245,255,0.05), transparent 60%);
+  opacity: 0;
+  transition: var(--transition);
+}
+.profile-card:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-4px);
+}
+.profile-card:hover::after { opacity: 1; }
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.profile-logo {
+  width: 44px; height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.profile-logo.lc { background: rgba(255,160,0,0.15); color: #ffa500; border: 1px solid rgba(255,160,0,0.3); }
+.profile-logo.gfg { background: rgba(0,200,0,0.12); color: #00c800; border: 1px solid rgba(0,200,0,0.3); }
+.profile-logo.hr { background: rgba(0,195,150,0.12); color: #00c396; border: 1px solid rgba(0,195,150,0.3); }
+.profile-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+.profile-username {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+.pstat {
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 6px;
+  border: 1px solid var(--border-dim);
+}
+.pstat-val {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.pstat-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.lc .pstat-val { color: #ffa500; }
+.gfg .pstat-val { color: #00c800; }
+.hr .pstat-val { color: #00c396; }
+.profile-visit {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+.visit-link {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+.visit-link:hover { color: var(--neon-cyan); }
+.github-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.github-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.github-logo {
+  width: 36px; height: 36px;
+  color: var(--text-primary);
+}
+.github-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: 1px;
+}
+.github-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+.contrib-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+.contrib-cell {
+  width: 12px; height: 12px;
+  border-radius: 2px;
+  transition: var(--transition);
+}
+.contrib-cell:hover { transform: scale(1.3); }
+.contrib-0 { background: rgba(0,245,255,0.05); }
+.contrib-1 { background: rgba(0,245,255,0.2); }
+.contrib-2 { background: rgba(0,245,255,0.4); }
+.contrib-3 { background: rgba(0,245,255,0.65); }
+.contrib-4 { background: rgba(0,245,255,0.9); box-shadow: 0 0 4px rgba(0,245,255,0.5); }
+.contrib-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  justify-content: flex-end;
+}
+@media (max-width: 700px) {
+  .profiles-grid { grid-template-columns: 1fr; }
+}
