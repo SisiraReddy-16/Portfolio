@@ -217,12 +217,57 @@
     <div class="projects-grid">
       <div class="project-card">
         <span class="project-number">01</span>
-        <h3 class="project-title">ATM Card Simulator</h3>
-        <p class="project-description">Developed a backend-driven ATM simulation system using Python, implementing core banking operations like withdrawal, deposit, and balance inquiry with structured data handling to simulate real-world transaction workflows.</p>
+        <h3 class="project-title">ATM Card Management System</h3>
+        <p class="project-description">Built a basic ATM Card Management System to understand the core flow between frontend interfaces and backend logic. The project simulates essential banking operations such as user authentication, balance checking, deposits, and withdrawals using Object-Oriented Programming principles in Python. Designed a clean UI with HTML and CSS while implementing modular backend logic to improve code structure and maintainability. This project helped strengthen understanding of frontend-backend communication, data handling, and real-world application flow.</p>
         <div class="project-tech">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
           <span class="tech-badge">Python</span>
-          <span class="tech-badge">Backend</span>
           <span class="tech-badge">OOP</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/SisiraReddy-16" target="_blank" class="project-link">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-number">02</span>
+        <h3 class="project-title">CGPA Calculator</h3>
+        <p class="project-description">Developed a CGPA Calculator application that automates GPA and CGPA calculations based on student marks and credits. Integrated Python backend logic with CSV file reading and processing to dynamically manage academic data. Created a simple and user-friendly frontend using HTML and CSS to display calculated results efficiently. This project improved understanding of file handling, backend data processing, and integration between frontend forms and Python-based computation systems.</p>
+        <div class="project-tech">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">CSV</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/SisiraReddy-16" target="_blank" class="project-link">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-number">03</span>
+        <h3 class="project-title">Blinkit Landing Page Clone</h3>
+        <p class="project-description">Created a responsive clone of the Blinkit landing page focusing on modern UI/UX design and responsive web development principles. Implemented flexible layouts, navigation bars, banners, product sections, and adaptive styling for multiple screen sizes using pure HTML and CSS. The project enhanced practical skills in positioning, Flexbox, responsiveness, spacing, and real-world frontend design implementation while closely replicating an industry-level website interface.</p>
+        <div class="project-tech">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/SisiraReddy-16" target="_blank" class="project-link">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <span class="project-number">04</span>
+        <h3 class="project-title">Flexy – Online Bidding Platform</h3>
+        <p class="project-description">Developed a full-stack online bidding platform where users can create listings, place bids, and interact through a dynamic web interface. Built the frontend using HTML, CSS, and JavaScript for responsive and interactive user experience, while Flask handled backend routing and application logic. Integrated Supabase for database management and real-time data handling. The project provided hands-on experience with authentication flow, database integration, CRUD operations, API communication, and full-stack application architecture.</p>
+        <div class="project-tech">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Flask</span>
+          <span class="tech-badge">Supabase</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/SisiraReddy-16" target="_blank" class="project-link">GitHub</a>
@@ -340,23 +385,22 @@
         </div>
       </div>
       
-      <form class="contact-form" onsubmit="event.preventDefault(); this.querySelector('.form-success').classList.add('show');">
+      <form class="contact-form" action="https://formsubmit.co/sisirareddymallepally322@gmail.com" method="POST">
         <div class="form-group">
           <label class="form-label">Name</label>
-          <input type="text" class="form-input" required placeholder="Your Name">
+          <input type="text" name="name" class="form-input" required placeholder="Your Name">
         </div>
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input type="email" class="form-input" required placeholder="Your Email">
+          <input type="email" name="email" class="form-input" required placeholder="Your Email">
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" required placeholder="Your Message"></textarea>
+          <textarea name="message" class="form-textarea" required placeholder="Your Message"></textarea>
         </div>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New submission from Portfolio">
         <button type="submit" class="btn btn-outline form-submit">Send Message</button>
-        <div class="form-success">
-          <span>✓ Message sent successfully!</span>
-        </div>
       </form>
     </div>
   </div>
